@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     MyAdapter mAdapter;
     String [] myDataset = {"Wash Car", "Eat food", "Buy clothes", "Go to church", "Watch soccer"};
     String [] myContent = {
-            "Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Etiam sit amet orci eget eros faucibus tincidunt. Curabitur ullamcorper ultricies nisi.",
+            "Aliquam lorem ante, das in, viverra quis, feugiat a, tellus. Etiam sit amet orci eget eros faucibus tincidunt. Curabitur ullamcorper ultricies nisi.",
             "Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean massa. Vivamus consectetuer hendrerit lacus.",
             "Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Phasellus viverra nulla ut metus varius laoreet.",
             "Aenean ut eros et nisl sagittis vestibulum. Cras sagittis. Aliquam erat volutpat.",
