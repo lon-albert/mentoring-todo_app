@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/root/ilab/mentoring-todo_app-1/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/root/ilab/mentoring-todo_app-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_f270fcd59604a2eeee53ebeced443b5c668283f5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/ilab/mentoring-todo_app-1/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/root/ilab/mentoring-todo_app-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_a773bbee947fb570a3c54fd31f45e84b61e87b8a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/ilab/mentoring-todo_app-1/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/root/ilab/mentoring-todo_app-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.4.0_77ee2ad2fbcbfb6fa5931172bbca7e4640e0c3fb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/ilab/mentoring-todo_app-1/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/root/ilab/mentoring-todo_app-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.4.0_9d07c52e71f819ff535a96809690033162e6f0e8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/ilab/mentoring-todo_app-1/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ab96dd212cc1bf9fae81966642e2ecfa0eb75b28">
+        <dex dex="/root/ilab/mentoring-todo_app-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_bf8ac7d923fe29d3c060c6513aae2e5eb02efbd5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/ilab/mentoring-todo_app-1/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/root/ilab/mentoring-todo_app-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_ac3fa6b7ba8609e1d183990be905d859f2f6bea3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/ilab/mentoring-todo_app-1/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/root/ilab/mentoring-todo_app-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_953be0c73900d8aed30053d1cd795e52cf8bed7f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/root/ilab/mentoring-todo_app-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_f6239821904b8bd6abe8ab66c1e2e11c76623210/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/ilab/mentoring-todo_app-1/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="/root/ilab/mentoring-todo_app-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-23.4.0_7bb168b293a371fa3729588a59cb60e4ce95f3f4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/ilab/mentoring-todo_app-1/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e5828ca23c43c827421ef58213365207a557f222">
+        <dex dex="/root/ilab/mentoring-todo_app-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c531919fe3a3f505172fce023cfc2ed2dc418aa9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/root/ilab/mentoring-todo_app-1/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/root/ilab/mentoring-todo_app-1/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_049ff8f85c44b1ee5d6cf50b979b8b5f15b938fe/classes.dex" />
+    </item>
+
+</items>
