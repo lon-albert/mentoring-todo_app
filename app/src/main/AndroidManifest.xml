@@ -12,6 +12,15 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.ilab.todoapp.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".SignUp"
+            android:label="@string/title_signup_activity"
+            android:parentActivityName=".SignUp"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,6 +36,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.android.ilab.todoapp.MainActivity" />
         </activity>
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>
