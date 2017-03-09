@@ -7,13 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.ilab.todoapp.R;
+import com.android.ilab.todoapp.pojos.Todo;
+
+import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-    private String[] mDataset;
-    private String[] mContentSet;
+    private List<Todo> mDataset;
     private Context mContext;
 
 
@@ -37,11 +38,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(String[] myDataset, String[] myContentSet, Context mContext) {
+    public MyAdapter(List<Todo> myDataset, Context mContext) {
         mDataset = myDataset;
-        mContentSet = myContentSet;
         this.mContext = mContext;
-        Toast.makeText(this.mContext, "Welcome", Toast.LENGTH_SHORT).show();
     }
 
     // Create new views (invoked by the layout manager)
@@ -62,14 +61,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.titleView.setText(mDataset[position]);
-        holder.contentView.setText(mContentSet[position]);
+        holder.titleView.setText(mDataset.get(position).getTitle());
+        holder.contentView.setText(mDataset.get(position).getDetail());
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mDataset.size();
     }
 }
 
