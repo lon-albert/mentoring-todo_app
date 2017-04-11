@@ -7,11 +7,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import com.android.ilab.todoapp.adapters.MyAdapter;
 import com.android.ilab.todoapp.pojos.Todo;
+import com.android.ilab.todoapp.session.SessionManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager mLayoutManager;
     MyAdapter mAdapter;
+
+    SessionManager sessionManager;
+
     //    String [] myDataset = {"Wash Car", "Eat food", "Buy clothes", "Go to church", "Watch soccer"};
     String [] myContent = {
             "Aliquam lorem ante, das in, viverra quis, feugiat a, tellus. Etiam sit amet orci eget eros faucibus tincidunt. Curabitur ullamcorper ultricies nisi.",
@@ -46,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        sessionManager = new SessionManager(this);
 
         recyclerView =  (RecyclerView) findViewById(R.id.my_recycler_view);
 
@@ -74,6 +83,25 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getBaseContext(), "Welcome", Toast.LENGTH_SHORT).show();
 
         getTodos();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = new MenuInflater(this);
+        inflater.inflate(R.menu.menu_main, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getTitle().toString().equals(getResources().getString(R.string.logout))){
+            sessionManager.setLogin(false);
+            finish();
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void getTodos() {

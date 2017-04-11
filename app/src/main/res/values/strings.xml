@@ -19,4 +19,6 @@
     </string>
     <string name="detail">Todo Details</string>
     <string name="title">Title</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="logout">Logout</string>
 </resources>
