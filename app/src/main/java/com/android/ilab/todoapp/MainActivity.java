@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -15,8 +16,6 @@ import com.android.ilab.todoapp.pojos.Todo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -25,23 +24,18 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String BASE_URL = "http://192.168.20.121:8080/api/";
+    public static final String BASE_URL = "https://fierce-ocean-30542.herokuapp.com/api/";
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     RecyclerView recyclerView;
     RecyclerView.LayoutManager mLayoutManager;
     MyAdapter mAdapter;
-    //    String [] myDataset = {"Wash Car", "Eat food", "Buy clothes", "Go to church", "Watch soccer"};
-    String [] myContent = {
-            "Aliquam lorem ante, das in, viverra quis, feugiat a, tellus. Etiam sit amet orci eget eros faucibus tincidunt. Curabitur ullamcorper ultricies nisi.",
-            "Maecenas egestas arcu quis ligula mattis placerat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean massa. Vivamus consectetuer hendrerit lacus.",
-            "Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Phasellus viverra nulla ut metus varius laoreet.",
-            "Aenean ut eros et nisl sagittis vestibulum. Cras sagittis. Aliquam erat volutpat.",
-            "Praesent metus tellus elementum eu  sagittis vestibulum. Cras sagittis. Aliq"};
 
     List<Todo> todos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -93,24 +87,16 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<List<Todo>> call, Response<List<Todo>> response) {
                 todos.clear();
                 todos.addAll(response.body());
-                todos = populateTodos();
+//                todos = populateTodos();
                 mAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onFailure(Call<List<Todo>> call, Throwable t) {
-                Toast.makeText(getBaseContext(), "An error occured, please try again later", Toast.LENGTH_SHORT).show();
+                Log.e(TAG, t.getMessage());
+                Toast.makeText(getBaseContext(), "An error occured: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-    private List<Todo> populateTodos() {
-        Random random = new Random();
-        for (Todo todo : todos) {
-            int index = random.nextInt(myContent.length);
-            todo.setDetail(myContent[index]);
-        }
-        return todos;
     }
 
 }
