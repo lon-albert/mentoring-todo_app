@@ -97,8 +97,8 @@ public class UserDB extends SQLiteOpenHelper {
             user.setUsername(cursor.getString(1));
             user.setFullname(cursor.getString(2));
             user.setEmail(cursor.getString(3));
-            user.setCreated_at(cursor.getString(8));
-            user.setUpdated_at(cursor.getString(9));
+            user.setCreated_at(cursor.getString(4));
+            user.setUpdated_at(cursor.getString(5   ));
         }
         cursor.close();
         db.close();

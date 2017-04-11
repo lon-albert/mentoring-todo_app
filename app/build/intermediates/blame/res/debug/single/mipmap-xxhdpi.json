@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/lon/Documents/Projects/android/TodoApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/home/lon/Documents/Projects/android/TodoApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/lon/Documents/Projects/android/TodoApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/studio.png",
+        "source": "/home/lon/Documents/Projects/android/TodoApp/app/src/main/res/mipmap-xxhdpi/studio.png"
+    }
+]

@@ -13,11 +13,15 @@ public class Todo {
   @SerializedName("text")
   private String title;
 
+  @SerializedName("detail")
   private String detail;
 
-  public Todo(String title) {
-    this.title = title;
-  }
+  @SerializedName("done")
+  private boolean done ;
+
+//  public Todo(String title) {
+//    this.title = title;
+//  }
 
   public String getTitle() {
     return title;
@@ -34,4 +38,7 @@ public class Todo {
   public void setDetail(String detail) {
     this.detail = detail;
   }
+
+  public void setDone(boolean done) { this.done= done;}
+  public boolean getDone(){ return done; }
 }

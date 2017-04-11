@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="23"
+    density="xxhdpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="15842872069436"
+    token="2758225080280545255"
+    verifier="COLD_SWAP_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="6103" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="189" />
+    <task
+        name="verifier"
+        duration="36" />
+
+    <artifact
+        location="/home/lon/Documents/Projects/android/TodoApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+        type="DEX" />
+
+    <build
+        timestamp="13926884688525"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/lon/Documents/Projects/android/TodoApp/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="15586454201831"
+        verifier="FIELD_ADDED" >
+        <artifact
+            location="/home/lon/Documents/Projects/android/TodoApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/home/lon/Documents/Projects/android/TodoApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="15842872069436"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/lon/Documents/Projects/android/TodoApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>

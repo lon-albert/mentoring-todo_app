@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -14,12 +15,13 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.android.ilab.todoapp.adapters.MyAdapter;
+import com.android.ilab.todoapp.database.UserDB;
 import com.android.ilab.todoapp.pojos.Todo;
+import com.android.ilab.todoapp.pojos.User;
 import com.android.ilab.todoapp.session.SessionManager;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -29,13 +31,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String BASE_URL = "http://192.168.20.121:8080/api/";
+    public static final String BASE_URL = "https://fierce-ocean-30542.herokuapp.com/api/";
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     RecyclerView recyclerView;
     RecyclerView.LayoutManager mLayoutManager;
     MyAdapter mAdapter;
 
+
     SessionManager sessionManager;
+    UserDB userdb;
+    User user;
 
     //    String [] myDataset = {"Wash Car", "Eat food", "Buy clothes", "Go to church", "Watch soccer"};
     String [] myContent = {
@@ -49,12 +55,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         sessionManager = new SessionManager(this);
+        userdb = new UserDB(this);
 
         recyclerView =  (RecyclerView) findViewById(R.id.my_recycler_view);
 
@@ -80,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Toast.makeText(getBaseContext(), "Welcome", Toast.LENGTH_SHORT).show();
+        user = userdb.getUserDetails();
+        Toast.makeText(getBaseContext(), "Welcome " + user.getFullname(), Toast.LENGTH_SHORT).show();
 
         getTodos();
     }
@@ -98,8 +107,10 @@ public class MainActivity extends AppCompatActivity {
 
         if(item.getTitle().toString().equals(getResources().getString(R.string.logout))){
             sessionManager.setLogin(false);
-            finish();
+            Toast.makeText(getBaseContext(), "We're sorry to see you go, " + user.getUsername(), Toast.LENGTH_SHORT).show();
+            userdb.deleteUsers();
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -121,24 +132,16 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<List<Todo>> call, Response<List<Todo>> response) {
                 todos.clear();
                 todos.addAll(response.body());
-                todos = populateTodos();
+//                todos = populateTodos();
                 mAdapter.notifyDataSetChanged();
             }
 
             @Override
             public void onFailure(Call<List<Todo>> call, Throwable t) {
-                Toast.makeText(getBaseContext(), "An error occured, please try again later", Toast.LENGTH_SHORT).show();
+                Log.e(TAG, t.getMessage());
+                Toast.makeText(getBaseContext(), "An error occured: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-    private List<Todo> populateTodos() {
-        Random random = new Random();
-        for (Todo todo : todos) {
-            int index = random.nextInt(myContent.length);
-            todo.setDetail(myContent[index]);
-        }
-        return todos;
     }
 
 }

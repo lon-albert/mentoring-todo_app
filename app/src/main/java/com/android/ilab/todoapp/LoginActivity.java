@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.android.ilab.todoapp.database.UserDB;
 import com.android.ilab.todoapp.session.SessionManager;
 
 /**
@@ -44,6 +45,7 @@ public class LoginActivity extends AppCompatActivity  {
     private View mLoginFormView;
 
     private SessionManager sessionManager;
+    private UserDB userdb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,7 @@ public class LoginActivity extends AppCompatActivity  {
         if(sessionManager.isLoggedIn()){
             launchMainActivity();
         }
+        userdb = new UserDB(this);
 
         setContentView(R.layout.activity_login);
         // Set up the login form.
@@ -132,6 +135,7 @@ public class LoginActivity extends AppCompatActivity  {
                 Thread.sleep(3000);
                 showProgress(false);
                 sessionManager.setLogin(true);
+                userdb.addUser(mEmailView.getText().toString(), "Lon", "Lon Ilesanmi", "12:04:2017:00:17:22", "12:04:2017:00:17:22");
                 launchMainActivity();
             } catch (InterruptedException e) {
                 showProgress(false);

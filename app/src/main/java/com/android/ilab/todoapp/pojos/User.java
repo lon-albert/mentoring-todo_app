@@ -4,6 +4,7 @@ package com.android.ilab.todoapp.pojos;
  * Created by lon on 4/11/17.
  */
 public class User {
+
     private String username;
     private String fullname;
     private String email;
@@ -28,5 +29,25 @@ public class User {
 
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCreated_at() {
+        return created_at;
+    }
+
+    public String getUpdated_at() {
+        return updated_at;
     }
 }
