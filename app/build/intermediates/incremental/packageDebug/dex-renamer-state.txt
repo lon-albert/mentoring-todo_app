@@ -1,7 +1,0 @@
-#Tue Apr 11 23:58:16 WAT 2017
-base.0=/home/lon/Documents/Projects/android/TodoApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_bbd199befbc2a5432b2b3ba2c99b6a5d3411f49f
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/home/lon/Documents/Projects/android/TodoApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_38f18329710294ecbbd45855248c4fe2cc7d7060/classes.dex
-base.1=/home/lon/Documents/Projects/android/TodoApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_38f18329710294ecbbd45855248c4fe2cc7d7060
-file.0=/home/lon/Documents/Projects/android/TodoApp/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_bbd199befbc2a5432b2b3ba2c99b6a5d3411f49f/classes.dex
